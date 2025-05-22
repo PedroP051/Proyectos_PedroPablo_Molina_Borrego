@@ -1,0 +1,13 @@
+<?php
+$host = "mysql-pedrop.alwaysdata.net";
+$user = "pedrop";
+$pass = "Espana19!";
+$dbname = "pedrop_proyecto3_v1";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error al conectar con la base de datos: " . $e->getMessage());
+}
+?>
